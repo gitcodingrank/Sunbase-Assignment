@@ -14,5 +14,8 @@ public interface CustomerService {
 	Customer getCustomerById(Integer customerId) throws SomethingWentWrongException, CustomerNotFoundException;
 	Customer deleteCustomerById(Integer customerId) throws SomethingWentWrongException, CustomerNotFoundException;
 	Customer getCustomerByEmail(String email) throws SomethingWentWrongException, CustomerNotFoundException;
+	List<Customer> customSortByAnyOrder(String fieldOne, String directionOne, String fieldTwo, String directionTwo);
+	List<Customer> getCustomerPageWise(int page, int size);
+	List<Customer> searchCustomers(int page, int size, String field, String value);
 
 }

@@ -18,7 +18,9 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class JwtTokenValidatorFilter extends OncePerRequestFilter {
 
 	@Override
@@ -47,6 +49,7 @@ public class JwtTokenValidatorFilter extends OncePerRequestFilter {
 				Authentication auth = new UsernamePasswordAuthenticationToken(username, null, AuthorityUtils.commaSeparatedStringToAuthorityList(authorities));
 
 				SecurityContextHolder.getContext().setAuthentication(auth);
+				log.info("Validate successfully.");
 
 			} catch (Exception e) {
 				throw new BadCredentialsException("Invalid Token received..");
