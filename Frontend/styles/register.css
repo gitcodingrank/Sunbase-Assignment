@@ -1,0 +1,64 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color:whitesmoke;
+}
+
+#addCustomer{
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: blue;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+}
+
+form{
+    position: absolute;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#form-input-box{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+#form-input-box>div{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+}
+#form-input-box>div>input{
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 7px;
+    outline-color: rgb(36, 36, 253);
+}
+
+input[type="submit"]{
+   position: absolute;
+   right: 15px;
+   padding: 8px 10px;
+   border: 1px solid grey;
+   border-radius: 7px;
+   background-color: blue;
+   color: white;
+   
+}
+
+#register{
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
